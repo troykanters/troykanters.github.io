@@ -1,176 +1,253 @@
 <!DOCTYPE html>
-<html lang="nl">
+
+<html>
+
 <head>
+    <title>Handige websites</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Handige websites</title>
-    <link rel="icon" type="image/x-icon" href="/docs/assets/github-mark-white.png">
+    <link rel="icon" type="image/x-icon" href="/docs/assets/github-mark-white.png" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <style>
-        body, h1, h2, h3, h4, h5, h6 {
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-family: "Lato", sans-serif;
-            color: #3f3f3f;
         }
-        body, html {
+
+        body,
+        html {
             height: 100%;
-            margin: 0;
+            color: #3f3f3f;
             line-height: 1.8;
         }
-        .bgimg-1, .bgimg-2, .bgimg-3 {
+
+        /* Create a Parallax Effect */
+        .bgimg-1,
+        .bgimg-2,
+        .bgimg-3 {
             background-attachment: fixed;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
         }
+
+        /* First image (Logo. Full height) */
         .bgimg-1 {
             background-image: url('/docs/assets/1.jpg');
             min-height: 100%;
         }
+
+        /* Second image (Portfolio) */
         .bgimg-2 {
             background-image: url("/docs/assets/2.jpg");
             min-height: 400px;
         }
+
+        /* Third image (Contact) */
         .bgimg-3 {
             background-image: url("/docs/assets/3.jpg");
             min-height: 400px;
         }
-        .navbar {
-            position: fixed;
-            width: 100%;
-            z-index: 10;
-            top: 0;
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 10px 0;
-            transition: 0.4s;
-        }
-        .navbar a {
-            color: #000;
-            padding: 8px 16px;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 14px;
-            transition: 0.3s;
-        }
-        .navbar a:hover {
-            background-color: #ddd;
-            color: #000;
-        }
+
         .w3-wide {
             letter-spacing: 8px;
         }
-        .w3-display-middle {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
+
+        .w3-hover-opacity {
+            cursor: pointer;
         }
-        .container {
-            padding: 64px;
-            text-align: center;
-        }
-        .container h3 {
-            font-size: 24px;
-            margin-bottom: 16px;
-        }
-        .container p {
-            margin: 8px 0;
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 16px;
-            text-align: center;
-        }
-        .footer-button {
-            background-color: #f1f1f1;
-            color: #000;
-            padding: 8px 16px;
-            text-decoration: none;
-        }
-        .footer-button:hover {
-            background-color: #ddd;
-        }
+
+        /* Turn off parallax scrolling for tablets and phones */
         @media only screen and (max-device-width: 1600px) {
-            .bgimg-1, .bgimg-2, .bgimg-3 {
+
+            .bgimg-1,
+            .bgimg-2,
+            .bgimg-3 {
                 background-attachment: scroll;
+                min-height: 400px;
             }
         }
     </style>
 </head>
+
 <body>
 
-    <!-- Navbar -->
-    <div class="navbar" id="myNavbar">
-        <a href="#home">Home</a>
-        <a href="#vakantie">Vakantie</a>
-        <a href="#gisgeo">GIS/GEO</a>
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar" id="myNavbar">
+            <a href="#home" class="w3-bar-item w3-button">HOME</a>
+            <a href="#vakantie" class="w3-bar-item w3-button">
+                VAKANTIE</a>
+            <a href="#gisgeo" class="w3-bar-item w3-button">
+                GIS/GEO</a>
+        </div>
+
     </div>
 
     <!-- First Parallax Image with Logo Text -->
-    <div class="bgimg-1 w3-display-middle" id="home">
-        <span class="w3-wide w3-xlarge">Handige websites</span>
+    <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+        <div class="w3-display-middle" style="white-space:nowrap;">
+            <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Handige websites
+            </span>
+        </div>
     </div>
 
-    <!-- Content Section -->
-    <div class="container" id="overig">
-        <h3>Overig</h3>
-        <p><em>Diverse handige websites</em></p>
-        <p><a href="https://archive.is/" target="_blank">Webpage archive</a></p>
-        <p><a href="https://radio.garden/" target="_blank">Radio Garden</a></p>
-        <p><a href="https://dilab.has.nl/showcases/treinenradar/" target="_blank">Treinenradar</a></p>
-        <p><a href="https://www.prettigparkeren.nl/kaart/#!Den_Bosch/" target="_blank">Parkeren</a></p>
-        <p><a href="https://rentry.co/megathread" target="_blank">Megathread</a></p>
+    <!-- Container (About Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="overig">
+        <h3 class="w3-center">Overig</h3>
+        <p class="w3-center"><em>Diverse handige websites</em></p>
+        <p>
+            <a href="https://archive.is/" target="_blank">Webpage archive</a>
+        </p>
+        <p>
+            <a href="https://radio.garden/" target="_blank">Radio Garden</a>
+        </p>
+        <p>
+            <a href="https://dilab.has.nl/showcases/treinenradar/" target="_blank">Treinenradar</a>
+        </p>
+        <p>
+            <a href="https://www.prettigparkeren.nl/kaart/#!Den_Bosch/" target="_blank">Parkeren</a>
+        </p>
+        <p>
+            <a href="https://rentry.co/megathread" target="_blank">Megathread</a>
+        </p>
     </div>
+
 
     <!-- Second Parallax Image with Portfolio Text -->
-    <div class="bgimg-2 w3-display-middle">
-        <span class="w3-xxlarge w3-wide">VAKANTIE</span>
+    <div class="bgimg-2 w3-display-container w3-opacity-min">
+        <div class="w3-display-middle">
+            <span class="w3-xxlarge w3-text-white w3-wide">VAKANTIE</span>
+        </div>
     </div>
 
-    <!-- Content Section -->
-    <div class="container" id="vakantie">
-        <h3>Vakantie</h3>
-        <p><em>Handige websites voor vakanties</em></p>
-        <p><a href="https://www.cozycozy.com/nl" target="_blank">Alle accomodaties</a></p>
-        <p><a href="https://www.unesco.nl/nl/werelderfgoedkaart" target="_blank">UNESCO-werelderfgoedkaart</a></p>
-        <p><a href="https://medianism.org/2018/12/27/what-are-the-cheapest-countries-to-visit-the-travel-expense-index-shows-the-data/" target="_blank">Travel Cost Index</a></p>
-        <p><a href="https://data.worldbank.org/indicator/pa.nus.pppc.rf?end=2017&start=2017&type=shaded&view=map&year=2021" target="_blank">Price level ratio</a></p>
-        <p><a href="https://climatemaps.romgens.com/" target="_blank">ClimateMaps</a></p>
+    <!-- Container (Portfolio Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="vakantie">
+        <h3 class="w3-center">Vakantie</h3>
+        <p class="w3-center"><em>Handige websites voor vakanties</em></p>
+        <p>
+            <a href="https://www.cozycozy.com/nl" target="_blank">Alle accomodaties</a>
+        </p>
+        <p>
+            <a href="https://www.unesco.nl/nl/werelderfgoedkaart" target="_blank">UNESCO-werelderfgoedkaart</a>
+        </p>
+        <p>
+            <a href="https://medianism.org/2018/12/27/what-are-the-cheapest-countries-to-visit-the-travel-expense-index-shows-the-data/"
+                target="_blank">Travel Cost Index</a>
+        </p>
+        <p>
+            <a href="https://data.worldbank.org/indicator/pa.nus.pppc.rf?end=2017&start=2017&type=shaded&view=map&year=2021"
+                target="_blank">Price level ratio</a>
+        </p>
+        <p>
+            <a href="https://climatemaps.romgens.com/" target="_blank">ClimateMaps</a>
+        </p>
+        <p>
+            <a href="https://www.whereandwhen.net/when/" target="_blank">Where and When to travel</a>
+        </p>
+        <p>
+            <a href="https://theculturetrip.com/europe/articles/this-map-shows-you-exactly-when-to-travel-to-each-country/"
+                target="_blank">High seasons mapped</a>
+        </p>
+        <p>
+            <a href="https://scarletscribs.wordpress.com/2018/01/07/this-awesome-map-tells-you-the-best-time-to-visit-every-destination-in-the-world/"
+                target="_blank">Best Time to Visit</a>
+        </p>
+        <p>
+            <a href="https://www.chronotrains.com/" target="_blank">Chronotrains</a>
+        </p>      
     </div>
+
+    <!-- Modal for full size images on click-->
+    <!-- <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+        <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image">
+        </span>
+        <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+            <img id="img01" class="w3-image">
+            <p id="caption" class="w3-opacity w3-large"></p>
+        </div>
+    </div> -->
 
     <!-- Third Parallax Image with Portfolio Text -->
-    <div class="bgimg-3 w3-display-middle">
-        <span class="w3-xxlarge w3-wide">GIS/GEO</span>
+    <div class="bgimg-3 w3-display-container w3-opacity-min">
+        <div class="w3-display-middle">
+            <span class="w3-xxlarge w3-text-white w3-wide">GIS/GEO</span>
+        </div>
     </div>
 
-    <!-- Content Section -->
-    <div class="container" id="gisgeo">
-        <h3>Geografie</h3>
-        <p><em>Handige GIS of GEO websites</em></p>
-        <p><a href="https://dilab.has.nl/showcases/treinenradar/" target="_blank">Treinenradar</a></p>
-        <p><a href="https://gmd.has.nl/natgeo2021/540278203/Website/welkom.html" target="_blank">NATGEO project</a></p>
-        <p><a href="https://geoinformatienederland.nl/vacatures/" target="_blank">GIN vacatures</a></p>
-        <p><a href="https://www.esri.com/training/catalog/search/" target="_blank">ESRI Courses</a></p>
-        <p><a href="https://parallel.co.uk/netherlands/#13/51.7/5.3/0/40" target="_blank">3D bouwjaar Nederland</a></p>
+    <!-- Container (Contact Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="gisgeo">
+        <h3 class="w3-center">Geografie</h3>
+        <p class="w3-center"><em>Handige GIS of GEO websites</em></p>
+        <p>
+            <a href="https://dilab.has.nl/showcases/treinenradar/" target="_blank">Treinenradar</a>
+        </p>
+        <p>
+            <a href="https://gmd.has.nl/natgeo2021/540278203/Website/welkom.html" target="_blank">NATGEO project</a>
+        </p>
+        <p>
+            <a href="https://geoinformatienederland.nl/vacatures/" target="_blank">GIN vacatures</a>
+        </p>
+        <p>
+            <a href="https://www.esri.com/training/catalog/search/" target="_blank">ESRI Courses</a>
+        </p>
+        <p>
+            <a href="https://parallel.co.uk/netherlands/#13/51.7/5.3/0/40" target="_blank">3D bouwjaar Nederland</a>
+        </p>
+        <p>
+            <a href="https://www.arcgis.com/home/search.html?q=owner:%22Esri_NL_Content%22&t=groups&num=100"
+                target="_blank">ESRI NL Content Groups</a>
+        </p>
+        <p>
+            <a href="https://climatemaps.romgens.com/" target="_blank">ClimateMaps</a>
+        </p>
+        <p>
+            <a href="https://climatedata.ca/var-type/temperature/" target="_blank">Klimaatvariabelen</a>
+        </p>
+        <p>
+            <a href="https://felt.com/" target="_blank">Felt</a>
+        </p>
+        <p>
+            <a href="https://valhalla.openstreetmap.de/isochrones" target="_blank">Travel Time Isochrones</a>
+        </p>
     </div>
 
     <!-- Footer -->
-    <footer>
-        <a href="#home" class="footer-button">Naar boven</a>
+    <footer class="w3-center w3-black w3-padding-64 w3-opacity ">
+        <a href="#home" class="w3-button w3-light-grey">
+            Naar boven</a>
     </footer>
 
     <script>
-        // Change navbar style on scroll
+        // Modal Image Gallery
+        // function onClick(element) {
+        //     document.getElementById("img01").src = element.src;
+        //     document.getElementById("modal01").style.display = "block";
+        //     var captionText = document.getElementById("caption");
+        //     captionText.innerHTML = element.alt;
+        // }
+
+        // Change style of navbar on scroll
         window.onscroll = function () {
-            var navbar = document.getElementById("myNavbar");
-            if (window.scrollY > 100) {
-                navbar.classList.add("navbar-scrolled");
-            } else {
-                navbar.classList.remove("navbar-scrolled");
-            }
+            myFunction()
         };
+
+        function myFunction() {
+            var navbar = document.getElementById("myNavbar");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+            } else {
+                navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+            }
+        }
     </script>
 
 </body>
+
 </html>
