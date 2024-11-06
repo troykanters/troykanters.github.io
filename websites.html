@@ -1,23 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Handige websites</title>
-    <link rel="icon" type="image/x-icon" href="/docs/assets/github-mark-white.png" />
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/docs/assets/github-mark-white.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <style>
         body, h1, h2, h3, h4, h5, h6 {
             font-family: "Lato", sans-serif;
+            color: #3f3f3f;
         }
         body, html {
             height: 100%;
-            color: #3f3f3f;
-            line-height: 1.8;
             margin: 0;
+            line-height: 1.8;
         }
-        .bgimg {
+        .bgimg-1, .bgimg-2, .bgimg-3 {
             background-attachment: fixed;
             background-position: center;
             background-repeat: no-repeat;
@@ -25,80 +24,95 @@
         }
         .bgimg-1 {
             background-image: url('/docs/assets/1.jpg');
-            min-height: 100vh;
-        }
-        .bgimg-2, .bgimg-3 {
-            min-height: 400px;
+            min-height: 100%;
         }
         .bgimg-2 {
-            background-image: url('/docs/assets/2.jpg');
+            background-image: url("/docs/assets/2.jpg");
+            min-height: 400px;
         }
         .bgimg-3 {
-            background-image: url('/docs/assets/3.jpg');
+            background-image: url("/docs/assets/3.jpg");
+            min-height: 400px;
         }
-        .container {
-            max-width: 1000px;
-            margin: auto;
-            padding: 64px 16px;
-            text-align: center;
-        }
-        .nav-bar {
-            display: flex;
-            justify-content: center;
+        .navbar {
             position: fixed;
             width: 100%;
+            z-index: 10;
             top: 0;
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 10px;
-            transition: background-color 0.3s;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px 0;
+            transition: 0.4s;
         }
-        .nav-bar a {
-            margin: 0 10px;
-            color: black;
+        .navbar a {
+            color: #000;
+            padding: 8px 16px;
             text-decoration: none;
-            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+            transition: 0.3s;
         }
-        .header-text {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100%;
-            font-size: 2rem;
-            font-weight: bold;
-            color: white;
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 20px;
+        .navbar a:hover {
+            background-color: #ddd;
+            color: #000;
+        }
+        .w3-wide {
+            letter-spacing: 8px;
+        }
+        .w3-display-middle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        .container {
+            padding: 64px;
+            text-align: center;
+        }
+        .container h3 {
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+        .container p {
+            margin: 8px 0;
         }
         footer {
-            background-color: black;
-            color: white;
-            padding: 64px 16px;
+            background-color: #333;
+            color: #fff;
+            padding: 16px;
             text-align: center;
-            margin-top: 64px;
         }
-        @media only screen and (max-width: 1600px) {
-            .bgimg {
+        .footer-button {
+            background-color: #f1f1f1;
+            color: #000;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+        .footer-button:hover {
+            background-color: #ddd;
+        }
+        @media only screen and (max-device-width: 1600px) {
+            .bgimg-1, .bgimg-2, .bgimg-3 {
                 background-attachment: scroll;
             }
         }
     </style>
 </head>
-
 <body>
 
     <!-- Navbar -->
-    <div class="nav-bar" id="navbar">
-        <a href="#home">HOME</a>
-        <a href="#vakantie">VAKANTIE</a>
+    <div class="navbar" id="myNavbar">
+        <a href="#home">Home</a>
+        <a href="#vakantie">Vakantie</a>
         <a href="#gisgeo">GIS/GEO</a>
     </div>
 
     <!-- First Parallax Image with Logo Text -->
-    <div class="bgimg bgimg-1" id="home">
-        <div class="header-text">Handige websites</div>
+    <div class="bgimg-1 w3-display-middle" id="home">
+        <span class="w3-wide w3-xlarge">Handige websites</span>
     </div>
 
-    <!-- About Section -->
+    <!-- Content Section -->
     <div class="container" id="overig">
         <h3>Overig</h3>
         <p><em>Diverse handige websites</em></p>
@@ -109,52 +123,54 @@
         <p><a href="https://rentry.co/megathread" target="_blank">Megathread</a></p>
     </div>
 
-    <!-- Second Parallax Image with Text -->
-    <div class="bgimg bgimg-2">
-        <div class="header-text">VAKANTIE</div>
+    <!-- Second Parallax Image with Portfolio Text -->
+    <div class="bgimg-2 w3-display-middle">
+        <span class="w3-xxlarge w3-wide">VAKANTIE</span>
     </div>
 
-    <!-- Vakantie Section -->
+    <!-- Content Section -->
     <div class="container" id="vakantie">
         <h3>Vakantie</h3>
         <p><em>Handige websites voor vakanties</em></p>
-        <p><a href="https://www.cozycozy.com/nl" target="_blank">Alle accommodaties</a></p>
+        <p><a href="https://www.cozycozy.com/nl" target="_blank">Alle accomodaties</a></p>
         <p><a href="https://www.unesco.nl/nl/werelderfgoedkaart" target="_blank">UNESCO-werelderfgoedkaart</a></p>
         <p><a href="https://medianism.org/2018/12/27/what-are-the-cheapest-countries-to-visit-the-travel-expense-index-shows-the-data/" target="_blank">Travel Cost Index</a></p>
+        <p><a href="https://data.worldbank.org/indicator/pa.nus.pppc.rf?end=2017&start=2017&type=shaded&view=map&year=2021" target="_blank">Price level ratio</a></p>
+        <p><a href="https://climatemaps.romgens.com/" target="_blank">ClimateMaps</a></p>
     </div>
 
-    <!-- Third Parallax Image with Text -->
-    <div class="bgimg bgimg-3">
-        <div class="header-text">GIS/GEO</div>
+    <!-- Third Parallax Image with Portfolio Text -->
+    <div class="bgimg-3 w3-display-middle">
+        <span class="w3-xxlarge w3-wide">GIS/GEO</span>
     </div>
 
-    <!-- GIS/GEO Section -->
+    <!-- Content Section -->
     <div class="container" id="gisgeo">
         <h3>Geografie</h3>
         <p><em>Handige GIS of GEO websites</em></p>
         <p><a href="https://dilab.has.nl/showcases/treinenradar/" target="_blank">Treinenradar</a></p>
         <p><a href="https://gmd.has.nl/natgeo2021/540278203/Website/welkom.html" target="_blank">NATGEO project</a></p>
+        <p><a href="https://geoinformatienederland.nl/vacatures/" target="_blank">GIN vacatures</a></p>
+        <p><a href="https://www.esri.com/training/catalog/search/" target="_blank">ESRI Courses</a></p>
+        <p><a href="https://parallel.co.uk/netherlands/#13/51.7/5.3/0/40" target="_blank">3D bouwjaar Nederland</a></p>
     </div>
 
     <!-- Footer -->
     <footer>
-        <a href="#home" style="color: white;">Naar boven</a>
+        <a href="#home" class="footer-button">Naar boven</a>
     </footer>
 
     <script>
-        // Scroll effect on Navbar
-        window.onscroll = function() {
-            var navbar = document.getElementById("navbar");
+        // Change navbar style on scroll
+        window.onscroll = function () {
+            var navbar = document.getElementById("myNavbar");
             if (window.scrollY > 100) {
-                navbar.style.backgroundColor = "#fff";
-                navbar.style.boxShadow = "0px 2px 10px rgba(0, 0, 0, 0.1)";
+                navbar.classList.add("navbar-scrolled");
             } else {
-                navbar.style.backgroundColor = "rgba(255, 255, 255, 0.9)";
-                navbar.style.boxShadow = "none";
+                navbar.classList.remove("navbar-scrolled");
             }
         };
     </script>
 
 </body>
-
 </html>
